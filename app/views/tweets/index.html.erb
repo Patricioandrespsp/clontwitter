@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tweets</h1>
+<h1>... ultimos Tweets</h1>
+
+<%= link_to "escribe aqui....", new_tweet_path %>
 
 <div id="tweets">
   <% @tweets.each do |tweet| %>
@@ -11,6 +13,18 @@
   <% end %>
 </div>
 
-<%= link_to "New tweet", new_tweet_path %>
 
+
+<%= form_with url: tweets_path, method: :get do |form|%>
+ <%= form.text_field :query_text, placeholder: t('Query text'), value: params[:query_text]%>
+<%end%>
+
+<br>
+<br>
+<br>
+<br>
 <%=raw pagy_nav(@pagy)%>
+<br>
+<br>
+<br>
+<br>

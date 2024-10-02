@@ -150,6 +150,9 @@ GEM
     pagy (9.0.9)
     pg (1.5.8)
     pg (1.5.8-x64-mingw-ucrt)
+    pg_search (2.3.7)
+      activerecord (>= 6.1)
+      activesupport (>= 6.1)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
@@ -253,6 +256,7 @@ DEPENDENCIES
   jbuilder
   pagy (~> 9.0)
   pg (~> 1.1)
+  pg_search (~> 2.3)
   puma (>= 5.0)
   rails (~> 7.1.4)
   selenium-webdriver
