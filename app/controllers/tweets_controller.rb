@@ -1,9 +1,11 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[ show edit update destroy ]
-
+ 
+  include Pagy::Backend
   # GET /tweets or /tweets.json
   def index
     @tweets = Tweet.all
+    @pagy, @tweets =pagy(Tweet.all)
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -18,6 +20,15 @@ class TweetsController < ApplicationController
   # GET /tweets/1/edit
   def edit
   end
+
+  def preview
+
+  end
+
+  def search
+
+  end
+
 
   # POST /tweets or /tweets.json
   def create

@@ -1,2 +1,3 @@
 class ApplicationController < ActionController::Base
-end
+  Pagy::DEFAULT[:limit]=10
+ end
